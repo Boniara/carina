@@ -31,6 +31,7 @@
 		<apache-http.version>4.4</apache-http.version>
 		<itext.version>5.0.6</itext.version>
 		<reflections.version>0.9.11</reflections.version>
+		<jetty-server.version>9.4.10.v20180503</jetty-server.version>
 
 	</properties>
 
@@ -163,6 +164,17 @@
 					<artifactId>guava</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty-server.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>${jetty-server.version}</version>
 		</dependency>
 
 
