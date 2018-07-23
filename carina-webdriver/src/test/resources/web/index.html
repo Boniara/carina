@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <link rel="stylesheet" href="css/default.css"/>
+</head>
+<body>
+    <div id="container">
+        <h5 class="title">
+            Welcome to carina framework testing pages
+        </h5>
+        <div style="float: right" class="input-container test">
+            <div show="showSearch">
+                <label for="searchInput">Search</label>
+                <input id="searchInput" type="text" name="textInput" export="search"/>
+            </div>
+            <div show="showCheckbox">
+                <label>Show search</label>
+                <input id="checkbox" type="checkbox" name="checkbox" export="showSearch" checked/>
+            </div>
+            <div show="hideCheckbox">
+                Hidden checkbox
+            </div>
+            <div>
+                <label>Show checkbox</label>
+                <input id="radioShow" type="radio" name="radio" value="showCheckbox" export="showCheckbox" checked/>
+                <label>
+                    Hide checkbox
+                    <input class="radio" id="radioHide" type="radio" name="radio" value="hideChecbox" export="hideCheckbox"/>
+                    <div class="radio">
+                        <div class="checkmark"></div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="inline-block">
+            <div class="form-title">
+                Register
+            </div>
+            <form name="submitForm" id="submitForm">
+                <div class="input-container">
+                    <label for="usernameInput">Username</label>
+                    <input id="usernameInput" name="username" type="text" export="username"/>
+                </div>
+                <div class="input-container">
+                    <label for="emailInput">Email</label>
+                    <input id="emailInput" name="email" type="email" export="email"/>
+                </div>
+                <div class="input-container">
+                    <input style="position: absolute; left: 0;" class="fab-button" onmouseenter="generateCode()" name="code" type="button" value="r"/>
+                    <input id="codeGenerateInput" name="code" type="text"/>
+                </div>
+                <div class="input-container">
+                    <label for="codeInput">Code</label>
+                    <input id="codeInput" name="code" type="text" export="code"/>
+                </div>
+                <div class="input-container">
+                    <label for="select">Select item</label>
+                    <select id="select" export="item">
+                        <option value>Choose one</option>
+                        <option value="item1">Item 1</option>
+                        <option value="item2">Item 2</option>
+                        <option value="item3">Item 3</option>
+                        <option value="item4">Item 4</option>
+                        <option value="item5">Item 5</option>
+                        <option value="item6">Item 6</option>
+                        <option value="item7">Item 7</option>
+                        <option value="item8">Item 8</option>
+                        <option value="item9">Item 9</option>
+                        <option value="item10">Item 10</option>
+                        <option value="item11">Item 11</option>
+                        <option value="item12">Item 12</option>
+                        <option value="item13">Item 13</option>
+                    </select>
+                </div>
+                <div class="inline-block" style="height: 20px; width: 200px; border: 2px solid gray">
+                    <div id="redSquare" class="inline-block" style="background-color: red; width: 20px; height: 20px;">
+                    </div>
+                    <div id="graySquare" class="inline-block" style="background-color: gray; width: 20px; height: 20px; float: right;">
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input id="submitButton" type="submit" value="Submit" class="button test" response-text="Response data"/>
+                </div>
+            </form>
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Code</th>
+                    <th>Item</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr class="test" repeat="users">
+                        <td style="width: 20%" inject="username"></td>
+                        <td style="width: 20%" inject="email"></td>
+                        <td style="width: 20%" inject="code"></td>
+                        <td style="width: 20%" inject="item"></td>
+                        <td style="width: 20%"><a href="info.html" import="currentUser">Show</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="status"></div>
+
+    <script src="js/default.js"></script>
+</body>
+</html>
